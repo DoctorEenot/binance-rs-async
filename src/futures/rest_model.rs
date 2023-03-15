@@ -252,11 +252,11 @@ pub struct AggTrade {
     pub qty: f64,
 }
 
-#[derive(Debug, Serialize, Deserialize, Clone)]
-#[serde(untagged)]
-pub enum MarkPrices {
-    AllMarkPrices(Vec<MarkPrice>),
-}
+// #[derive(Debug, Serialize, Deserialize, Clone)]
+// #[serde(untagged)]
+// pub enum MarkPrices {
+//     AllMarkPrices(Vec<MarkPrice>),
+// }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 #[serde(rename_all = "camelCase")]
@@ -619,7 +619,7 @@ pub struct FundingRate {
     pub funding_rate: f64,
 }
 
-pub static PERIODS: &'static [&str] = &["5m", "15m", "30m", "1h", "2h", "4h", "6h", "12h", "1d"];
+pub static PERIODS: &[&str] = &["5m", "15m", "30m", "1h", "2h", "4h", "6h", "12h", "1d"];
 
 #[derive(Deserialize)]
 #[serde(rename_all = "camelCase")]
